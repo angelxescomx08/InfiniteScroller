@@ -22,6 +22,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector2(0f, yInput * upForce));
+        rb.AddForce(Vector2.up * yInput * upForce);
     }
 }
