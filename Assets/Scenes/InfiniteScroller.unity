@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 90456554}
   - component: {fileID: 90456555}
   - component: {fileID: 90456556}
+  - component: {fileID: 90456557}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -306,6 +307,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: 30
+--- !u!114 &90456557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90456550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6347ef42075b0044b30dfcbad7c257b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &142037245
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5980f71064897847828a08bd5923231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minHeight: -1.8
+  maxHeight: 3.5
   spawnTime: 2
   obstaclePrefab: {fileID: 4223392207789008350, guid: 72cda7ec5f174884d88b9e6618ccf56e, type: 3}
 --- !u!4 &1172869102

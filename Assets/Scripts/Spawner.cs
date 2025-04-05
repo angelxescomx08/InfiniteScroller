@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private float minHeight, maxHeight;
     [SerializeField] private float spawnTime;
     [SerializeField] private GameObject obstaclePrefab;
 
@@ -17,9 +18,14 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(obstaclePrefab, transform.position, Quaternion.identity);
+            Instantiate(obstaclePrefab, GetRandomPosition(), Quaternion.identity);
             yield return new WaitForSeconds(spawnTime);
         }
+    }
+
+    Vector2 GetRandomPosition()
+    {
+        return new Vector2(transform.position.x, Random.Range(minHeight, maxHeight));
     }
 
     // Update is called once per frame
