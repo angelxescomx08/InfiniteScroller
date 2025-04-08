@@ -10,11 +10,12 @@ public class PlayerCollision : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
+        int pointsPerObstacle = 1;
         if (collision.CompareTag("Obstacle"))
         {
-            Debug.Log("Aumentar puntaje");
+            GameManager.Instance.AddScore(pointsPerObstacle);
         }
     }
 
