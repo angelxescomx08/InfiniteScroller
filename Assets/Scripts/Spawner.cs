@@ -28,9 +28,8 @@ public class Spawner : MonoBehaviour
         return new Vector2(transform.position.x, Random.Range(minHeight, maxHeight));
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StopSpawning()
     {
-        
+        StopAllCoroutines();
     }
 }

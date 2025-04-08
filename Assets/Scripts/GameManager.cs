@@ -28,4 +28,15 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
+    public void StopGame()
+    {
+        Spawner spawner = FindObjectOfType<Spawner>();
+        spawner.StopSpawning();
+
+        Scroll[] scrollingObjects = FindObjectsOfType<Scroll>();
+        foreach (Scroll scrollingObject in scrollingObjects)
+        {
+            scrollingObject.StopScrolling();
+        }
+    }
 }

@@ -17,4 +17,9 @@ public class Scroll : MonoBehaviour
     {
         transform.Translate(Vector2.left * scrollSpeed * Time.deltaTime);
     }
+
+    public void StopScrolling()
+    {
+        scrollSpeed = 0;
+    }
 }
