@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject explotionParticles, starParticles;
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -19,15 +15,23 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Star star = collision.GetComponent<Star>();
+        if (star != null)
+        {
+            GameManager.Instance.AddScore(star.GetPoints());
+            Instantiate(starParticles, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameManager.Instance.StopGame();
+        Instantiate(explotionParticles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

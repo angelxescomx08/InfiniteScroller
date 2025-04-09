@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6347ef42075b0044b30dfcbad7c257b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explotionParticles: {fileID: 2415523613441542515, guid: 111ee4d4d3c1cf94f8d5d1792aba9580, type: 3}
+  starParticles: {fileID: 2415523613441542515, guid: 9dccc8e37545ba346bc814f1d61b2917, type: 3}
 --- !u!1 &142037245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1447,8 @@ MonoBehaviour:
   minHeight: -1.8
   maxHeight: 3.5
   spawnTime: 2
-  prefab: {fileID: 4223392207789008350, guid: 72cda7ec5f174884d88b9e6618ccf56e, type: 3}
+  prefabs:
+  - {fileID: 4223392207789008350, guid: 72cda7ec5f174884d88b9e6618ccf56e, type: 3}
   minSpawnTime: 0.6
   timeDecreaseStep: 0.2
   spawnCountToDecreaseTime: 5
@@ -1630,7 +1633,10 @@ MonoBehaviour:
   minHeight: -2
   maxHeight: 4.5
   spawnTime: 4
-  prefab: {fileID: 4401557360278263115, guid: 8bedecdfe9999754bb84bf1a353657ec, type: 3}
+  prefabs:
+  - {fileID: 4401557360278263115, guid: 8bedecdfe9999754bb84bf1a353657ec, type: 3}
+  - {fileID: 4401557360278263115, guid: b9c2f9e05ed00464a9fd231c41526376, type: 3}
+  - {fileID: 4401557360278263115, guid: 631e8d2139bad3d48905ab5a9ee36045, type: 3}
   minSpawnTime: 0.6
   timeDecreaseStep: 0.2
   spawnCountToDecreaseTime: 5

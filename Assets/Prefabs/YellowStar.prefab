@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2938444855860721076}
   - component: {fileID: 7339688170894743859}
   - component: {fileID: 2280356271862857447}
+  - component: {fileID: 8347485505108820040}
   m_Layer: 0
-  m_Name: StarYellow
+  m_Name: YellowStar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,3 +163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
+--- !u!114 &8347485505108820040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401557360278263115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624aa48e42aa504a90c1f6b5135cbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 1

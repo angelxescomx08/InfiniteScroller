@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+        if(score < 0)
+        {
+            score = 0;
+        }
         scoreText.text = "Score: " + score.ToString();
     }
 
