@@ -68,7 +68,10 @@ public class GameManager : MonoBehaviour
 
     private void StopSpawn()
     {
-        Spawner spawner = FindObjectOfType<Spawner>();
-        spawner.StopSpawning();
+        Spawner[] spawner = FindObjectsOfType<Spawner>();
+        foreach (Spawner sp in spawner)
+        {
+            sp.StopSpawning();
+        }
     }
 }
